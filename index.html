@@ -34,20 +34,80 @@
                             <p>lagjgjgjsghlsjkhgsejh</p>
 
                             <div class="tab-titles">
-                                <p class="tab-links active-link">Skills</p>
-                                <p class="tab-links">Experience</p>
-                                <p class="tab-links">Education</p>
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
                             </div>
-                            <div class="tab-contents">
+                            <div class="tab-contents active-tab" id="skills">
                                 <ul>
-                                    <li><span>UI/UX</span><br>Designed front-end Web app interfaces</li>
-                                    <li><span>UI/UX</span><br>Designed front-end Web app interfaces</li>
-                                    <li><span>UI/UX</span><br>Designed front-end Web app interfaces</li>
+                                    <li><span>Hardware</span><br>Familiar with electronic systems, troubleshooting and operating systems</li>
+                                    <li><span>Software</span><br>Exposed to several languages in both front and backend such as C++<br>Python, Bootstrap and ReactJS</li>
+                                    <li><span>Robotics</span><br>Familiar with robotic circuitry and Arduino Programming</li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2018-2020</span><br>Pampanga High School, Special Science Class</li>
+                                    <li><span>2021-Present</span><br>Holy Angel University, BS Computer Engineering</li>
+                                
+                                </ul>
+                            </div>
+
+                            <div class="tab-contents active-tab" id="experience">
+                                <ul>
+                                    <li><span>None</span><br>Internships and Experience will soon be listed</li>
+                                    
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+ <!-- services -->
+  <div id="services">
+    <div class="container">
+        <h1 class="subtitle">Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web dEV</h2>
+                <p>ggqfgd</p>
+                <a href="#">Read More</a>
+            </div>
+            <div>
+                <h2>AI</h2>
+                <p>ggqfgd</p>
+                <a href="#">Read More</a>
+            </div>
+            <div>
+                <h2>Robot</h2>
+                <p>ggqfgd</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+                        
+                            
+                          
+              
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
