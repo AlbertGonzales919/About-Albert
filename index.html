@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Albert</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/28b9a8d891.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <ul>
-                    <li><a href=#>Home</a></li>
-                    <li><a href=#>About</a></li>
-                    <li><a href=#>Projects</a></li>
-                    <li><a href=#>Portfolio</a></li>
-                    <li><a href=#>Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Projects</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>COMPUTER ENGINEER</p>
-                <h1>Hi! I'm<span>Albert Gonzales</span> ,<br> currently pursuing 4th year CPE</h1>
+                <h1>Hi! I'm<span> Albert Gonzales</span> ,<br> currently pursuing 4th year CPE</h1>
             </div>
        
             <div id="about">
@@ -70,17 +73,20 @@
         <h1 class="subtitle">Services</h1>
         <div class="services-list">
             <div>
-                <h2>Web dEV</h2>
+                <i class="fa-solid fa-code"></i>
+                <h2>Service 1</h2>
                 <p>ggqfgd</p>
                 <a href="#">Read More</a>
             </div>
             <div>
-                <h2>AI</h2>
+                <i class="fa-solid fa-computer"></i>
+                <h2>Service 2</h2>
                 <p>ggqfgd</p>
                 <a href="#">Read More</a>
             </div>
             <div>
-                <h2>Robot</h2>
+                <i class="fa-solid fa-robot"></i>
+                <h2>Service 3</h2>
                 <p>ggqfgd</p>
                 <a href="#">Read More</a>
             </div>
@@ -88,10 +94,71 @@
     </div>
   </div>
 
-                        
+                        <!-- Portfolio section  -->
+  <div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <div class="portfolio-list">
+            <div class="portfolio">
+                <img src="images/Game Store.png" alt="">
+                <div class="layer">
+                    <h3>Game Store E-Commerce</h3>
+                    <p> A game store app with Bootsrap and ReactJS</p>
+                    <a href="#">More</a>
+                </div>
+                
+            </div>
+            <div class="portfolio">
+                <img src="images/battlebot.jpg" alt="">
+                <div class="layer">
+                    <h3>Battlebots</h3>
+                    <p>Collaborated on creating a robot that is competitive for battlebots with Arduino</p>
+                    <a href="#"> More</a>
+                </div>
+            </div>
+            <div class="portfolio">
+                <img src="images/battlebot.jpg" alt="">
+                <div class="layer">
+                    <h3>Battlebots</h3>
+                    <p>Collaborated on creating a robot that is competitive for battlebots with Arduino</p>
+                    <a href="#"> More</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All Projects</a>
+    </div>
+
+    </div>
+  </div>                     
                             
-                          
-              
+                        <!-- Contact section and contact form -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">My Contacts</h1>
+                <p><i class="fa-solid fa-envelope"></i>bertgonzales919@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>0968-553-5370</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/spicywolf919"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/AlbertGonzales919"><i class="fa-brands fa-github"></i></a>
+                    <a href=https://discordapp.com/users/394865330079531008><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.linkedin.com/in/albert-miguel-gonzales-9b1738364/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Albert-Miguel-Gonzales-FlowCV-Resume-20250413.pdf" download class="btn btn2">Download my Resume</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea rows="5" placeholder="Message"></textarea>
+                    <button type="submit" class="btn btn2">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+ </div>             
 
 
 
@@ -107,6 +174,16 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
     }
 </script>
 </body>
